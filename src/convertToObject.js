@@ -8,7 +8,7 @@
 function convertToObject(sourceString) {
   const styles = sourceString
     .split(';')
-    .filter((style) => style !== '')
+    .filter((style) => style.trim() !== '')
     .reduce((acc, style) => {
       const [property, value] = style.split(':').map((part) => part.trim());
 
